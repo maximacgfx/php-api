@@ -1,0 +1,19 @@
+{
+    "name": "root/symfony",
+    "description": "Small test api project",
+    "require": {
+        "ext-pdo_mysql": "*",
+        "jms/serializer": "^3.31",
+        "nette/utils": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Root\\Symfony\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "noname"
+        }
+    ]
+}
