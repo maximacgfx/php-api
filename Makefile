@@ -30,8 +30,8 @@ list:
 
 # Чтобы войти в любой из контейнеров, делаем следующее:
 app-nginx:
-	#docker exec -it $(NGINX) bash
-	echo "docker exec -it $(NGINX) bash"
+	docker exec -it $(NGINX) bash
+	#echo "docker exec -it $(NGINX) bash"
 
 app-php:
 	docker exec -it $(FPM) bash
@@ -46,6 +46,12 @@ app-mysql:
 # Просмотр запущенных контейенров:
 running:
 	docker ps
+
+show:
+	docker ps -a
+
+images:
+	docker image
 
 # Logs
 
@@ -67,9 +73,12 @@ inspect:
 	docker volume inspect mysql
 
 
+stop_all:
+	docker
 
-
-
+rm_containers:
+	docker rm $(NGINX) $(MYSQL) $(FPM) $(CLI)
+	docker network rm php-api_appnet
 
 
 

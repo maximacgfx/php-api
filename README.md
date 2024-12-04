@@ -6,11 +6,11 @@
 
 ### Alias
 ```bash
-source alias
+  source alias
 ````
 ### Makefile
 
 
-```makefile
-make list
+```sh
+  make list
 ```

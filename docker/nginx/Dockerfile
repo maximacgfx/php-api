@@ -1,4 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="maxfactor"
+FROM nginx:1.17
 
-ENTRYPOINT ["top", "-b"]
+ADD ./nginx .conf /etc/nginx/conf.d/default.conf
+
+WORKDIR /symfony
