@@ -10,3 +10,6 @@ APP=symapp
 NGINX=$APP-nginx-nginx
 
 alias app-nginx="docker exec -it $NGINX bash"
+
+alias gip="git push origin master"
+alias gs="git status"
