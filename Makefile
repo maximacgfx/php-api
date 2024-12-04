@@ -80,13 +80,8 @@ rm_containers:
 	docker rm $(NGINX) $(MYSQL) $(FPM) $(CLI)
 	docker network rm php-api_appnet
 
-
-
-
-
-
-
-
+symfony:
+	docker exec -i $(MYSQL) mysql -u$(MYSQL_ROOT_PASSWORD) --password=$(MYSQL_PASSWORD) $(MYSQL_DATABASE) < ./migration/init_table.sql
 
 
 
